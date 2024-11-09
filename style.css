@@ -1,0 +1,193 @@
+body {
+  font-family: 'Playfair Display', serif;
+  font-size: medium;
+  background-color: #b3b3b3; /* light grey background */
+  margin: 0;
+  padding: 50px 15px;
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+.resume-container {
+  display: flex;
+  background-image: url('bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:  #ffffff; /* white background */
+  width: 80%; /* Increased width for desktop */
+  max-width: 1200px; /* Limit max width for large screens */
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  flex-direction: column; /* Default to vertical for small screens */
+  padding: 20px;
+  font-size: 1rem;
+}
+
+/* Adjust layout for desktop - side by side */
+@media (min-width: 768px) {
+  .resume-container {
+    flex-direction: row; /* Horizontal layout for desktop */
+  }
+}
+
+/* Left Section Styling */
+.left-section {
+  background-color: #5c5959; /* dark grey background */
+  color: #ffffff; /* white text color */
+  padding: 20px;
+  width: 100%; /* Full width on smaller screens */
+  border-radius: 10px;
+  text-align: center;
+  border-right: none;
+  border-bottom: 5px solid #666666; /* Add bottom border on smaller screens */
+  top: 20px; /* Space from the top of the viewport */
+}
+
+
+@media (min-width: 768px) {
+  .left-section {
+    width: 35%; 
+    border-right: 5px solid #666666;
+    border-bottom: none; /* Remove bottom border on larger screens */
+  }
+}
+
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  margin-top: 10%;
+  border-radius: 50%;
+  border: 5px solid #666666; /* dark grey border */
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 1.5rem;
+  margin: 10px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff; /* white text color */
+  padding: 5px 10px;
+
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1rem;
+  padding: 2%;
+  margin: 20px 0 10px;
+  color: #2d2d2d; /* black text color */
+  border-radius: 10px;
+  box-shadow: 0 0 15px #666666; /* dark grey box shadow */
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+ul {
+  list-style-type: circle; /* Corrected list style type */
+  padding: 10px;
+  margin: 10px 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+/* Right Section Styling */
+.right-section {
+  padding: 20px;
+  width: 100%; /* Full width on smaller screens */
+  color: #2d2d2d;
+  font-family: 'Playfair Display', serif;
+  text-decoration: none;
+  font-size: 1rem;
+
+}
+
+@media (min-width: 768px) {
+  .right-section {
+    width: 65%; /* Adjust width for desktop screens */
+  }
+}
+
+button {
+  font-family: 'Playfair Display', serif;
+
+  border-radius: 10px;
+  box-shadow: 0 0 15px #333333; /* dark grey box shadow */
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  background-color: #666666; /* dark grey background */
+  color: #ffffff; /* white text color */
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #999999; /* light grey hover background */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .left-section {
+    width: 90%; /* Stack sections vertically */
+    text-align: center;
+    margin-bottom: 20px;
+    
+  }
+
+  .right-section {
+    width: 90%; /* Stack sections vertically */
+    text-align: center;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: small;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+} 
