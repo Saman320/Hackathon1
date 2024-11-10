@@ -1,10 +1,19 @@
+/* Global box-sizing */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Playfair Display', serif;
   font-size: medium;
   background-color: #b3b3b3; /* light grey background */
   margin: 0;
   padding: 50px 15px;
-  box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+/* Add overflow-wrap for text elements */
+p, h1, h3, ul, li {
+  overflow-wrap: break-word; /* Ensures long words wrap properly */
 }
 
 .resume-container {
@@ -13,8 +22,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color:  #ffffff; /* white background */
-  width: 80%; /* Increased width for desktop */
+  background-color: #ffffff; /* white background */
+  width: 100%; /* Full width on mobile */
   max-width: 1200px; /* Limit max width for large screens */
   margin: 0 auto;
   border-radius: 10px;
@@ -44,16 +53,15 @@ body {
   top: 20px; /* Space from the top of the viewport */
 }
 
-
 @media (min-width: 768px) {
   .left-section {
-    width: 35%; 
+    width: 35%;
     border-right: 5px solid #666666;
     border-bottom: none; /* Remove bottom border on larger screens */
   }
 }
 
-
+/* Profile Picture */
 .profile-picture {
   width: 100px;
   height: 100px;
@@ -70,16 +78,22 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .profile-picture {
+    width: 80px; /* Smaller image size for mobile */
+    height: 80px;
+  }
+}
+
+/* Headings */
 h1 {
   font-family: 'Playfair Display', serif;
-
   font-size: 1.5rem;
   margin: 10px 0;
   margin-bottom: 30px;
   text-align: center;
   color: #ffffff; /* white text color */
   padding: 5px 10px;
-
 }
 
 @media (min-width: 768px) {
@@ -105,7 +119,7 @@ h3 {
   }
 }
 
-
+/* List Styling */
 ul {
   list-style-type: circle; /* Corrected list style type */
   padding: 10px;
@@ -124,7 +138,6 @@ ul li {
   font-family: 'Playfair Display', serif;
   text-decoration: none;
   font-size: 1rem;
-
 }
 
 @media (min-width: 768px) {
@@ -133,9 +146,9 @@ ul li {
   }
 }
 
+/* Button Styling */
 button {
   font-family: 'Playfair Display', serif;
-
   border-radius: 10px;
   box-shadow: 0 0 15px #333333; /* dark grey box shadow */
   cursor: pointer;
@@ -153,16 +166,14 @@ button:hover {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .left-section {
-    width: 90%; /* Stack sections vertically */
+    width: 100%; /* Stack sections vertically */
     text-align: center;
     margin-bottom: 20px;
-    
   }
 
   .right-section {
-    width: 90%; /* Stack sections vertically */
+    width: 100%; /* Stack sections vertically */
     text-align: center;
-    
   }
 }
 
@@ -171,11 +182,6 @@ button:hover {
     font-size: small;
     padding: 20px 10px;
     text-align: center;
-  }
-
-  .profile-picture {
-    width: 80px;
-    height: 80px;
   }
 
   h1 {
@@ -190,4 +196,4 @@ button:hover {
     font-size: 0.9rem;
     padding: 8px 16px;
   }
-} 
+}
